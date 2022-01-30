@@ -1,0 +1,29 @@
+{
+  "notes": [
+    {
+      "id": "0",
+      "title": "Finish Note Taker",
+      "text": "finish the project and submit by sunday"
+    },
+    {
+      "id": "1",
+      "title": "mySQL",
+      "text": "finsh mysql module and start working on the homework"
+    },
+    {
+      "title": "Finish Note Taker",
+      "text": "finish the project and submit by sunday",
+      "id": "2"
+    },
+    {
+      "title": "Finish Note Taker",
+      "text": "finish the project and submit by sunday",
+      "id": "3"
+    },
+    {
+      "title": "Drink Water",
+      "text": "start your day by drinking water",
+      "id": "4"
+    }
+  ]
+}
