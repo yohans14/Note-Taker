@@ -29,6 +29,7 @@ function validateNote(note) {
 // endpoint to post new notes
 router.post("/notes", (req, res) => {
   const { title, text } = req.body;
+
   if (!validateNote(req.body)) {
     res.status(400).send("The note is not properly formatted.");
   } else {
@@ -66,19 +67,17 @@ router.post("/notes", (req, res) => {
   }
 });
 
-// endpoint for delete
+// endpoint for not deletion
 router.delete("/notes/:id", (req, res) => {
   console.log("req params", req.params.id);
-  const deletedItem = notes.filter(({ id }) => id != req.params.id);
+  const deletednote = notes.filter(({ id }) => id != req.params.id);
   fs.writeFile(
     "./db/notes.json",
-    JSON.stringify(deletedItem, null, 2),
+    JSON.stringify(deletednote, null, 2),
     (writeERR) =>
-      writeERR
-        ? console.error(writeERR)
-        : console.info("successfull update notes")
+      writeERR ? console.error(writeERR) : console.info("note updated")
   );
-  res.json(deletedItem);
+  res.json(deletednote);
 });
 
 module.exports = router;
